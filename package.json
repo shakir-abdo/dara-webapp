@@ -1,0 +1,45 @@
+{
+  "name": "dara-app",
+  "private": true,
+  "type": "module",
+  "author": {
+    "name": "Shakir Abdo",
+    "email": "shicolare1@gmail.com",
+    "url": "https://t.me/shicolare1"
+  },
+  "scripts": {
+    "start": "node .output/server/index.mjs",
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.1.0",
+    "@nuxtjs/tailwindcss": "^6.10.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vite-pwa/nuxt": "^0.3.5",
+    "nuxt": "^3.9",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "gsap": "^3.12.3",
+    "highlight.js": "^11.9.0",
+    "html2canvas": "^1.4.1",
+    "markdown-it": "13.0.1",
+    "markdown-it-container": "3.0.0",
+    "markdown-it-deflist": "2.1.0",
+    "markdown-it-emoji": "2.0.2",
+    "markdown-it-footnote": "3.0.3",
+    "markdown-it-ins": "3.0.1",
+    "markdown-it-sub": "1.0.0",
+    "markdown-it-sup": "1.0.0",
+    "mitt": "^3.0.1",
+    "nanoid": "^5.0.4",
+    "three": "^0.159.0",
+    "vue3-dropzone": "^2.2.0"
+  }
+}
