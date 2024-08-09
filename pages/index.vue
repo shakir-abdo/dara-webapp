@@ -1,5 +1,5 @@
 <template>
-  <div :key="$route.path" class="hero">
+  <div  :key="$route.path" class="hero">
     <div class="flex justify-between flex-wrap container mx-auto px-8 flex-col-reverse md:flex-row mb-48">
       <div class="w-full md:w-1/2 px-3">
         <div class="pt-12 md:pt-32">
@@ -46,10 +46,10 @@
 //import gsap from 'gsap'
 export default {
   setup() {
-    definePageMeta({
+    const layoutConfig = {
       header: 1,
       footer: 1
-    })
+    }
     const container = ref(null)
     const tools = ref([
       {
@@ -80,7 +80,13 @@ export default {
     const testAnim = () => {
       //const logoT = new gsap.timeline()
     }
-    return {container, testAnim, tools}
+    return {layoutConfig, container, testAnim, tools}
+  },
+    created() {
+      const { header, footer } = this.layoutConfig;
+      this.$route.meta.header = header;
+      this.$route.meta.footer = footer;
+
   },
   mounted() {
     this.testAnim()

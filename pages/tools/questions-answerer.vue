@@ -1,25 +1,25 @@
 <template>
-    <div class="container mx-auto px-2">
-        <h1>Questions answerer</h1>
-    </div>
+  <div class="container mx-auto px-2">
+    <h1>Questions answerer</h1>
+  </div>
 </template>
 <script>
 export default {
-    setup() {
-        definePageMeta({
-            header: 1,
-            footer:1
-        })
-
-        return {
-
-        }
-    },
-    mounted() {
-
+  setup() {
+    const layoutConfig = {
+      header: 1,
+      footer: 1
     }
+
+    return {
+      layoutConfig
+    }
+  },
+  created() {
+      const { header, footer } = this.layoutConfig;
+      this.$route.meta.header = header;
+      this.$route.meta.footer = footer;
+  }
 }
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

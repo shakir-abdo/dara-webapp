@@ -16,7 +16,7 @@
       </div>
     </nav>
     <div class="relative flex-1 flex flex-col items-stretch">
-      <NuxtPage class="flex-1"/>
+      <NuxtPage  class="flex-1"/>
     </div>
     <pre-loader  :showLoading="loading"/>
     <loader/>
