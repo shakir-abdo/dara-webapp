@@ -26,7 +26,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "gsap": "^3.12.3",
+    "gsap": "^3.12.5",
     "highlight.js": "^11.9.0",
     "html2canvas": "^1.4.1",
     "markdown-it": "13.0.1",
