@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout class="main flex flex-col items-stretch relative min-h-screen over" v-cloak>
-    <nav  v-show="$route.meta.header === 1" dir="ltr" class="flex justify-between items-center py-3 px-2 container mx-auto">
+    <nav  v-show="$route.meta.header === 1" dir="ltr" class="flex sticky top-0 justify-between items-center py-3 px-2 bg-gradient z-50">
       <nuxt-link to="/">
         <NuxtImg draggable="false" class="w-32 px-3 py-2" alt="Dara logo" src="/logo-black.png" />
       </nuxt-link>
@@ -114,4 +114,7 @@ export default {
 .tools-menu-cont ul:hover  {
   visibility: visible;
 }
+
+.bg-gradient {
+  background: radial-gradient(circle at center, #faf5f1 0%, #faf5f1 -10%, white 90%);}
 </style>

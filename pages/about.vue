@@ -31,58 +31,16 @@
     </div>
 
     <!-- Team Section -->
-    <div class="py-20 text-center">
+    <div id="members" class="py-20 text-center">
       <h2 class="text-3xl font-bold">The Team</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-        <div class="bg-white p-8 shadow-lg card-gradient relative">
-          <img src="public/avatar.png" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
-          <h3 class="mt-6 text-xl font-bold">Member 1</h3>
-          <p class="mt-4">Description</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
+      <div class="bg-white p-8 shadow-lg card-gradient relative" v-for="(member, index) in members" :key="index">
+          <img :src="member.image" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
+          <h3 class="mt-6 text-xl font-bold">{{ member.name }}</h3>
+          <p class="mt-4">{{ member.description }}</p>
           <div class="flex justify-center mt-4 space-x-4">
-            <a href="https://github.com/member1" target="_blank">
-              <img src="public/github.svg" class="w-8 h-8"> <!-- GitHub Icon -->
-            </a> 
-            <a href="https://x.com/member1" target="_blank">
-              <img src="public/x.svg" class="w-8 h-8"> <!-- X Icon -->
-            </a>
-          </div>
-        </div>
-        <div class="bg-white p-8 shadow-lg card-gradient relative">
-          <img src="public/avatar.png" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
-          <h3 class="mt-6 text-xl font-bold">Member 2</h3>
-          <p class="mt-4">Description</p>
-          <div class="flex justify-center mt-4 space-x-4">
-            <a href="https://github.com/member1" target="_blank">
-              <img src="public/github.svg" class="w-8 h-8"> <!-- GitHub Icon -->
-            </a> 
-            <a href="https://x.com/member1" target="_blank">
-              <img src="public/x.svg" class="w-8 h-8"> <!-- X Icon -->
-            </a>
-          </div>
-        </div>
-        <div class="bg-white p-8 shadow-lg card-gradient relative">
-          <img src="public/avatar.png" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
-          <h3 class="mt-6 text-xl font-bold">Member 3</h3>
-          <p class="mt-4">Description</p>
-          <div class="flex justify-center mt-4 space-x-4">
-            <a href="https://github.com/member1" target="_blank">
-              <img src="public/github.svg" class="w-8 h-8"> <!-- GitHub Icon -->
-            </a> 
-            <a href="https://x.com/member1" target="_blank">
-              <img src="public/x.svg" class="w-8 h-8"> <!-- X Icon -->
-            </a>
-          </div>
-        </div>
-        <div class="bg-white p-8 shadow-lg card-gradient relative">
-          <img src="public/avatar.png" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
-          <h3 class="mt-6 text-xl font-bold">Member 4</h3>
-          <p class="mt-4">Description</p>
-          <div class="flex justify-center mt-4 space-x-4">
-            <a href="https://github.com/member1" target="_blank">
-              <img src="public/github.svg" class="w-8 h-8"> <!-- GitHub Icon -->
-            </a> 
-            <a href="https://x.com/member1" target="_blank">
-              <img src="public/x.svg" class="w-8 h-8"> <!-- X Icon -->
+            <a v-for="(links, i) in member.links" :key="i" :href="links.url" target="_blank">
+              <img :src="links.icon" class="w-8 h-8"> <!-- Social Icon -->
             </a>
           </div>
         </div>
@@ -98,16 +56,54 @@ export default {
       header: 1,
       footer: 1
     }
+    const container = ref(null)
+    const members = ref([
+      {
+        name: 'Member 1',
+        image: 'avatar.png',
+        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        links: [
+          { url: 'https://github.com/member', icon: 'github.svg' },
+          { url: 'https://x.com/member', icon: 'x.svg' }
+        ]
+      },
+      {
+        name: 'Member 2',
+        image: 'avatar.png',
+        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        links: [
+          { url: 'https://github.com/member', icon: 'github.svg' },
+          { url: 'https://x.com/member', icon: 'x.svg' }
+        ]
+      },
+      {
+        name: 'Member 3',
+        image: 'avatar.png',
+        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        links: [
+          { url: 'https://github.com/member', icon: 'github.svg' },
+          { url: 'https://x.com/member', icon: 'x.svg' }
+        ]
+      },
+      {
+        name: 'Member 4',
+        image: 'avatar.png',
+        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        links: [
+          { url: 'https://github.com/member', icon: 'github.svg' },
+          { url: 'https://x.com/member', icon: 'x.svg' }
+        ]
+      }
+    ]);
 
-    return {
-      layoutConfig
-    }
+    return {layoutConfig, container, members}
   },
-  created() {
-    const { header, footer } = this.layoutConfig;
-    this.$route.meta.header = header;
-    this.$route.meta.footer = footer;
-  }
+    created() {
+      const { header, footer } = this.layoutConfig;
+      this.$route.meta.header = header;
+      this.$route.meta.footer = footer;
+
+  },
 }
 </script>
 
