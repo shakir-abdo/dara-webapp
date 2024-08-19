@@ -3,8 +3,8 @@
     <div class="flex justify-between flex-wrap container mx-auto px-8 flex-col-reverse md:flex-row mb-48">
       <div class="w-full md:w-1/2 px-3">
         <div class="pt-12 md:pt-32">
-          <h1 class="text-3xl md:text-5xl font-bold pb-7">Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum quam nisi nam! Nisi quo laboriosam eum voluptas fugit natus, voluptatum cupiditate totam possimus non optio dicta? Eligendi magnam a debitis.</p>
+          <h1 class="text-3xl md:text-5xl font-bold pb-7">Dara, Elevate Your Learning ! </h1>
+          <p>Dara is an innovative educational platform designed to enhance student learning through the power of AI. Featuring two core tools—Summarizer and Question Maker. Dara simplifies and accelerates the study process while providing a seamless, intuitive, and efficient learning experience.</p>
           <nuxt-link to="/#tools" class="bg-[#b9314f] text-white px-3 py-2 inline-block mt-5 rounded-xl"> Try now!</nuxt-link>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default {
         icon: 'collapse',
         color: '#b9314f',
         tint: '#f7e0e5',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        description: "This tool helps to condense long texts into concise summaries. Ideal for quickly understanding the main points.",
         path: '/tools/summarize'
       },
       {
@@ -65,7 +65,7 @@ export default {
         icon: `question-mark`,
         color: '#b9314f',
         tint: '#f7e0e5',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        description: "Generate questions from any text to test your understanding or to prepare for exams.",
         path: '/tools/questions-extractor'
       },
       {
@@ -73,7 +73,7 @@ export default {
         icon: `done-all`,
         color: '#b9314f',
         tint: '#f7e0e5',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        description: "Ask any question related to the text, and this tool will provide you with accurate answers.",
         path: '/tools/questions-answerer'
       }
     ])
@@ -102,6 +102,7 @@ export default {
   z-index: 1;
 }
 .art-cont {
+  transform: scale(0.8);
   border-radius: 7rem;
   cursor: pointer;
   position: relative;

@@ -2,11 +2,11 @@
   <div class="container mx-auto px-4">
     <!-- Hero Section -->
     <div class="bg-white mx-auto px-2 py-10 text-center">
-      <div class="flex justify-center">
+      <div class="flex flex-col justify-center items-center">
         <img src="/dara.png" alt="" class="md:mt-2 lg:mt-20 lg:m-0 w-1/4 md:w-1/6"/>
       </div>
       <h1 class="text-4xl font-bold mt-8">Dara</h1>
-      <p class="text-lg mt-4">Some text about our project. This is a short description of the project and its purpose. You can also highlight key features and goals here.</p>
+      <p class="text-lg mt-4 px-36 diodrum-font">Dara is an innovative educational platform designed to enhance student learning through the power of AI. Featuring two core tools—Summarizer and Question Maker. Dara simplifies and accelerates the study process while providing a seamless, intuitive, and efficient learning experience.</p>
       <button class="bg-[#b9314f] text-white px-4 py-2 mt-6 rounded">
         <a href="#mission">Learn More</a>
       </button>
@@ -16,14 +16,14 @@
     <div id="mission" class="grid grid-cols-1 md:grid-cols-2 gap-4 py-20">
       <div class="bg-white p-8 shadow-lg card-gradient relative">
         <h2 class="text-2xl font-bold">Our Mission</h2>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="mt-4">At Dara, our mission is to revolutionize education by leveraging the power of artificial intelligence to create smarter, more personalized learning experiences. We are committed to empowering students to achieve their full potential by providing innovative tools that simplify complex topics, enhance understanding, and foster a lifelong love of learning. Through cutting-edge technology and a user-centric approach, we strive to make education accessible, engaging, and effective for learners everywhere.</p>
         <div class="flex justify-center mt-4">
-          <img src="public/error-illustration.png" class="w-3/4 h-auto mt-4"/>
+          <img src="public/error-illustration.png" class="w-full h-full mt-2"/>
         </div>
       </div>
       <div class="bg-white p-8 shadow-lg card-gradient relative">
         <h2 class="text-2xl font-bold">Our Story</h2>
-        <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="mt-4">Dara was born from a simple yet powerful idea: to make learning easier and more accessible for everyone. Our journey began with a group of passionate students who recognized the challenges students face in today’s fast-paced world. We envisioned a platform that could bridge the gap between traditional learning methods and the advanced needs of modern students. With a deep commitment to education and technology, we created Dara—an AI-powered platform designed to transform how students study and interact with knowledge. Our story is one of innovation, perseverance, and a relentless pursuit of excellence in education.</p>
         <div class="flex justify-center mt-4">
           <img src="public/error-illustration.png" class="w-3/4 h-auto mt-4"/>
         </div>
@@ -59,39 +59,39 @@ export default {
     const container = ref(null)
     const members = ref([
       {
-        name: 'Member 1',
+        name: 'Omar .A',
+        image: 'mna2.jpg',
+        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        links: [
+          { url: 'https://github.com/oovaa', icon: 'github.svg' },
+          { url: 'https://x.com/Omarvx211', icon: 'x.svg' }
+        ]
+      },
+      {
+        name: 'Ahmed .E',
         image: 'avatar.png',
         description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
         links: [
-          { url: 'https://github.com/member', icon: 'github.svg' },
+          { url: 'https://github.com/ahmedehab0', icon: 'github.svg' },
           { url: 'https://x.com/member', icon: 'x.svg' }
         ]
       },
       {
-        name: 'Member 2',
-        image: 'avatar.png',
+        name: 'Shakir. A',
+        image: 'me.jpg',
         description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
         links: [
-          { url: 'https://github.com/member', icon: 'github.svg' },
-          { url: 'https://x.com/member', icon: 'x.svg' }
+          { url: 'https://github.com/shakir-abdo', icon: 'github.svg' },
+          { url: 'https://x.com/shakir_abdoo', icon: 'x.svg' }
         ]
       },
       {
-        name: 'Member 3',
-        image: 'avatar.png',
+        name: 'Esraa .H',
+        image: 'sroo.jpeg',
         description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
         links: [
-          { url: 'https://github.com/member', icon: 'github.svg' },
-          { url: 'https://x.com/member', icon: 'x.svg' }
-        ]
-      },
-      {
-        name: 'Member 4',
-        image: 'avatar.png',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
-        links: [
-          { url: 'https://github.com/member', icon: 'github.svg' },
-          { url: 'https://x.com/member', icon: 'x.svg' }
+          { url: 'https://github.com/EsraaGD', icon: 'github.svg' },
+          { url: 'https://x.com/Sroo22o', icon: 'x.svg' }
         ]
       }
     ]);
@@ -125,4 +125,15 @@ export default {
 .card-gradient:hover::after {
   opacity: 0.9;
 }
+
+/*@font-face {
+  font-family: 'DiodrumArabic';
+  src: url('fonts/DiodrumArabic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.diodrum-font {
+  font-family: 'DiodrumArabic', sans-serif;
+}*/
 </style>
