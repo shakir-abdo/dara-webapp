@@ -34,10 +34,12 @@ import Processing from '~/components/Processing.vue'
 import html2canvas from 'html2canvas'
 export default {
   setup() {
+    useSeoMeta({
+      title: 'Summarizer'
+    })
     const {$mdit: mdit, $listen, $event} = useNuxtApp()
     const toast = useToast()
     const runtimeConfig = useRuntimeConfig()
-
     const layoutConfig = {
       header: 1,
       footer: 1

@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     // Keys within public are also exposed client-side
     public: {
       apiBase: '/api',
-      backend: process.env.BACKEND
+      backend: process.env.BACKEND,
+      domain: process.env.DOMAIN
     }
   },
   nitro: {

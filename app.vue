@@ -57,16 +57,17 @@ import Toast from "@/components/Toast"
 
 export default {
   async setup() {
+    const runtimeConfig = useRuntimeConfig()
     useSeoMeta({
-      title: '',
-      description: '',
-      ogTitle: '',
-      ogDescription: '',
-      ogImage: '',
-      ogUrl: '',
-      twitterTitle: '',
+      title: 'Dara ai',
+      description: 'Dara is an innovative educational platform designed to enhance student learning',
+      ogTitle: 'Dara ai',
+      ogDescription: 'Dara is an innovative educational platform designed to enhance student learning',
+      ogImage: '/logo.png',
+      ogUrl: `${runtimeConfig.public.DOMAIN}`,
+      twitterTitle: 'Dara ai',
       twitterDescription: '',
-      twitterImage: '',
+      twitterImage: '/logo.png',
       twitterCard: 'summary'
     })
 
@@ -82,7 +83,6 @@ export default {
       }
     ]
   })
-  const runtimeConfig = useRuntimeConfig()
   const nuxtApp = useNuxtApp();
   const loading = ref(true);
   nuxtApp.hook("page:start", () => {

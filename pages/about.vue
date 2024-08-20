@@ -52,6 +52,9 @@
 <script>
 export default {
   setup() {
+    useSeoMeta({
+      title: 'About'
+    })
     const layoutConfig = {
       header: 1,
       footer: 1

@@ -7,6 +7,9 @@
 <script>
 export default {
   setup() {
+    useSeoMeta({
+      title: 'Questions extractor'
+    })
     const layoutConfig = {
       header: 1,
       footer: 1
