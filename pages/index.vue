@@ -18,19 +18,23 @@
       <h1 class="text-4xl font-bold text-center" id="tools">Our tools</h1>
       <div class="container mx-auto flex flex-wrap justify-start pb-5 pt-5 z-50 relative">
         <div class="wrapper p-4 w-full md:w-1/2 lg:w-1/3" v-for="(item, i) in tools" :key="i">
-          <div class="overflow-hidden p-7 glass-card shadow-lg relative draw-border border draw-border-el">
-            <div class="flex justify-between items-center z-20 relative">
-              <h3 class="font-bold text-gray-800">{{ item.name }}</h3>
-              <div class="w-10 h-10 flex justify-center items-center rounded-full" :style="`background-color:${item.tint};color:${item.color}`">
-                <i v-if="item.icon.startsWith('<svg')" class="icon icon-lg fill-current" v-html="item.icon"></i>
-                <i v-else class="icon icon-lg" :class="`icon-${item.icon}`"></i>
+          <div class="overflow-hidden p-7 glass-card shadow-lg relative draw-border border draw-border-el h-full">
+            <div class="flex flex-col justify-around h-full">
+              <div>
+                <div class="flex justify-between items-center z-20 relative">
+                  <h3 class="font-bold text-gray-800">{{ item.name }}</h3>
+                  <div class="w-10 h-10 flex justify-center items-center rounded-full" :style="`background-color:${item.tint};color:${item.color}`">
+                    <i v-if="item.icon.startsWith('<svg')" class="icon icon-lg fill-current" v-html="item.icon"></i>
+                    <i v-else class="icon icon-lg" :class="`icon-${item.icon}`"></i>
+                  </div>
+                </div>
+                <div class="relative z-20">
+                  <p>{{ item.description }}</p>
+                </div>
               </div>
-            </div>
-            <div class="relative z-20">
-              <p>{{ item.description }}</p>
-            </div>
-            <div class="z-20 relative mt-4">
-              <nuxt-link :to="item.path" class="hover:bg-black hover:text-white hover:border-black transition-all duration-150 bg-white border-2 border-gray-700 font-bold text-sm text-gray-800 px-2 py-2 rounded-lg">Try now</nuxt-link>
+              <div class="z-20 relative w-full mt-4">
+                <nuxt-link :to="item.path" class="hover:bg-black hover:text-white hover:border-black transition-all duration-150 bg-white border-2 border-gray-700 font-bold text-sm text-gray-800 px-2 py-2 rounded-lg">Try now</nuxt-link>
+              </div>
             </div>
             <div class="absolute inset-0">
               <div class="tool-overlay absolute inset-0 z-10"></div>
