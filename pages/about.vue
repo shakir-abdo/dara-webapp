@@ -6,7 +6,9 @@
         <img src="/dara.png" alt="" class="md:mt-2 lg:mt-20 lg:m-0 w-1/4 md:w-1/6"/>
       </div>
       <h1 class="text-4xl font-bold mt-8">Dara</h1>
-      <p class="text-lg mt-4 px-36 diodrum-font">Dara is an innovative educational platform designed to enhance student learning through the power of AI. Featuring two core tools—Summarizer and Question Maker. Dara simplifies and accelerates the study process while providing a seamless, intuitive, and efficient learning experience.</p>
+      <div class="w-full max-w-2xl mx-auto">
+        <p class="text-lg mt-4 px-0 diodrum-font">Dara is an innovative educational platform designed to enhance student learning through the power of AI. Featuring two core tools—Summarizer and Question Maker. Dara simplifies and accelerates the study process while providing a seamless, intuitive, and efficient learning experience.</p>
+      </div>
       <button class="bg-[#b9314f] text-white px-4 py-2 mt-6 rounded">
         <a href="#mission">Learn More</a>
       </button>
@@ -64,7 +66,7 @@ export default {
       {
         name: 'Omar .A',
         image: 'mna2.jpg',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        description: "The bro who is dealing with college, an internship and ALX at the same time. What can I say? I guess I'm Superman.",
         links: [
           { url: 'https://github.com/oovaa', icon: 'github.svg' },
           { url: 'https://x.com/Omarvx211', icon: 'x.svg' }
@@ -72,11 +74,11 @@ export default {
       },
       {
         name: 'Ahmed .E',
-        image: 'avatar.png',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        image: 'ahmed.jpg',
+        description: "A junior software engineer specialized in Backend development. Experienced in JS, TS and Python languages, Node.js, Express.js and Flask frameworks.",
         links: [
           { url: 'https://github.com/ahmedehab0', icon: 'github.svg' },
-          { url: 'https://x.com/member', icon: 'x.svg' }
+          { url: 'https://x.com/ahmedeh0000000', icon: 'x.svg' }
         ]
       },
       {
