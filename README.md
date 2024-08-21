@@ -127,12 +127,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Authors
 
   Front-End:
-  - Shakir Abdulrahim [![Twitter](public/x.svg)](https://x.com/shakir_abdoo) [![Github](public/github.svg)](https://github.com/shakir-abdo)
+  - Shakir Abdulrahim [![Twitter](public/x2.svg)](https://x.com/shakir_abdoo) [![Github](public/git.svg)](https://github.com/shakir-abdo)
 
-  - Isra Hatim: [![Twitter](public/x.svg)](https://twitter.com/Sroo22o) [![Github](public/github.svg)](https://github.com/EsraaGD)
+  - Isra Hatim: [![Twitter](public/x2.svg)](https://twitter.com/Sroo22o) [![Github](public/git.svg)](https://github.com/EsraaGD)
 
 
 Back-End:
-- Omar Abdulrahim: [![Twitter](public/x.svg)](https://twitter.com/Omarvx211) [![Github](public/github.svg)](https://github.com/oovaa)
+- Omar Abdulrahim: [![Twitter](public/x2.svg)](https://twitter.com/Omarvx211) [![Github](public/git.svg)](https://github.com/oovaa)
 
-- Ahmed Ehab: [![Twitter](public/x.svg)](https://twitter.com/ahmedeh0000000) [![Github](public/github.svg)](https://github.com/ahmedehab0)
+- Ahmed Ehab: [![Twitter](public/x2.svg)](https://twitter.com/ahmedeh0000000) [![Github](public/git.svg)](https://github.com/ahmedehab0)
+
