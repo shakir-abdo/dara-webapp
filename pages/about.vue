@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto px-4">
     <!-- Hero Section -->
-    <div class="bg-white mx-auto px-2 py-10 text-center">
+    <div class="bg-white pattern mx-auto px-2 py-10 text-center">
       <div class="flex flex-col justify-center items-center">
         <img src="/dara.png" alt="" class="md:mt-2 lg:mt-20 lg:m-0 w-1/4 md:w-1/6"/>
       </div>
@@ -142,14 +142,23 @@ export default {
   opacity: 0.9;
 }
 
-/*@font-face {
-  font-family: 'DiodrumArabic';
-  src: url('fonts/DiodrumArabic-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+.pattern {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 
-.diodrum-font {
-  font-family: 'DiodrumArabic', sans-serif;
-}*/
+.pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png);
+  opacity: 0.2;
+  z-index: -1;
+}
 </style>
+
