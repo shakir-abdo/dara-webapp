@@ -15,40 +15,51 @@
     </div>
 
     <!-- Mission & Story Section -->
-    <div id="mission" class="grid grid-cols-1 md:grid-cols-2 gap-4 py-20">
-      <div class="bg-white p-8 shadow-lg card-gradient relative">
-        <h2 class="text-2xl font-bold">Our Mission</h2>
-        <p class="mt-4">At Dara, our mission is to revolutionize education by leveraging the power of artificial intelligence to create smarter, more personalized learning experiences. We are committed to empowering students to achieve their full potential by providing innovative tools that simplify complex topics, enhance understanding, and foster a lifelong love of learning. Through cutting-edge technology and a user-centric approach, we strive to make education accessible, engaging, and effective for learners everywhere.</p>
-        <div class="flex justify-center mt-4">
-          <img src="public/error-illustration.png" class="w-full h-full mt-2"/>
-        </div>
-      </div>
-      <div class="bg-white p-8 shadow-lg card-gradient relative">
-        <h2 class="text-2xl font-bold">Our Story</h2>
-        <p class="mt-4">Dara was born from a simple yet powerful idea: to make learning easier and more accessible for everyone. Our journey began with a group of passionate students who recognized the challenges students face in today’s fast-paced world. We envisioned a platform that could bridge the gap between traditional learning methods and the advanced needs of modern students. With a deep commitment to education and technology, we created Dara—an AI-powered platform designed to transform how students study and interact with knowledge. Our story is one of innovation, perseverance, and a relentless pursuit of excellence in education.</p>
-        <div class="flex justify-center mt-4">
-          <img src="public/error-illustration.png" class="w-3/4 h-auto mt-4"/>
-        </div>
-      </div>
+<div id="mission" class="grid grid-cols-1 md:grid-cols-2 gap-4 py-20">
+  <!-- Mission Section -->
+  <div class="bg-white p-8 shadow-lg card-gradient relative flex flex-col justify-between">
+<div>
+      <h2 class="text-2xl font-bold">Our Mission</h2>
+      <p class="mt-4">At Dara, our mission is to revolutionize education by leveraging the power of artificial intelligence to create smarter, more personalized learning experiences. We are committed to empowering students to achieve their full potential by providing innovative tools that simplify complex topics, enhance understanding, and foster a lifelong love of learning. Through cutting-edge technology and a user-centric approach, we strive to make education accessible, engaging, and effective for learners everywhere.</p>
     </div>
+    <div class="flex justify-center mt-4">
+      <img src="public/story.jpg" class="w-full h-auto mt-2"/>
+    </div>
+  </div>
 
-    <!-- Team Section -->
-    <div id="members" class="py-20 text-center">
-      <h2 class="text-3xl font-bold">The Team</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
-      <div class="bg-white p-8 shadow-lg card-gradient relative" v-for="(member, index) in members" :key="index">
-          <img :src="member.image" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
-          <h3 class="mt-6 text-xl font-bold">{{ member.name }}</h3>
-          <p class="mt-4">{{ member.description }}</p>
-          <div class="flex justify-center mt-4 space-x-4">
-            <a v-for="(links, i) in member.links" :key="i" :href="links.url" target="_blank">
-              <img :src="links.icon" class="w-8 h-8"> <!-- Social Icon -->
-            </a>
-          </div>
-        </div>
+  <!-- Story Section -->
+  <div class="bg-white p-8 shadow-lg card-gradient relative flex flex-col justify-between">
+    <div>
+      <h2 class="text-2xl font-bold">Our Story</h2>
+      <p class="mt-4">Dara was born from a simple yet powerful idea: to make learning easier and more accessible for everyone. Our journey began with a group of passionate students who recognized the challenges students face in today’s fast-paced world. We envisioned a platform that could bridge the gap between traditional learning methods and the advanced needs of modern students. With a deep commitment to education and technology, we created Dara—an AI-powered platform designed to transform how students study and interact with knowledge. Our story is one of innovation, perseverance, and a relentless pursuit of excellence in education.</p>
+    </div>
+    <div class="flex justify-center mt-4">
+      <img src="public/mission.jpg" class="w-full h-auto mt-2"/>
+    </div>
+  </div>
+</div>
+
+
+<!-- Team Section -->
+<div id="members" class="py-20 text-center">
+  <h2 class="text-3xl font-bold">The Team</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
+    <div class="bg-white p-8 shadow-lg card-gradient relative flex flex-col justify-between" v-for="(member, index) in members" :key="index">
+      <div>
+        <img :src="member.image" class="rounded-full w-32 h-32 mx-auto"/> <!-- Member image -->
+        <h3 class="mt-6 text-xl font-bold">{{ member.name }}</h3>
+        <p class="mt-4">{{ member.description }}</p>
+      </div>
+
+      <div class="flex justify-center mt-4 space-x-4">
+        <a v-for="(links, i) in member.links" :key="i" :href="links.url" target="_blank">
+          <img :src="links.icon" class="w-8 h-8"> <!-- Social Icon -->
+        </a>
       </div>
     </div>
   </div>
+</div>
+</div>
 </template>
 
 <script>
