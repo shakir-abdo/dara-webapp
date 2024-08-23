@@ -1,7 +1,7 @@
 <template>
     <div v-if="showLoading" class="fixed w-full top-0 z-50 bottom-0 bg-[#ffffffbf] flex flex-col justify-center items-center">
         <loader-template />
-        <p v-if="showLoadingLable" class="pt-2" dir="rtl">please wait ...</p>
+        <p v-if="showLoadingLable" class="pt-2">please wait ...</p>
     </div>
 </template>
 <script>

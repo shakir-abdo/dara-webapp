@@ -1,6 +1,5 @@
 <template>
   <div class="overflow-hidden">
-    <processing v-if="processing" class="z-50" :image="file" />
     <div class="container mx-auto px-4">
       <div class="bg-gray-100 p-4 rounded-lg mt-8 border">
         <h1 class="font-bold text-2xl">Summarizer</h1>
@@ -11,13 +10,13 @@
       <div class="py-5" v-if="file">
         <button @click="submit" class="bg-secondary text-white px-3 py-2 rounded-lg hover:opacity-75 transition-opacity duration-150 z-0 relative">Summarize</button>
       </div>
-      <div class="mt-12" v-if="markdown" dir="rtl">
+      <div class="mt-12" v-if="markdown">
         <h1 class="font-bold text-xl text-gray-700">Summary</h1>
         <div class="bg-gray-100 p-2 rounded-lg mt-4 border">
           <div class="markdown-body prose max-w-full prose-slate px-7 py-4 w-full" v-html="mdit.render(markdown)"></div>
         </div>
         <button @click="saveSummaryAsImage" class="bg-secondary text-white mt-4 px-3 py-2 rounded-lg hover:opacity-75 transition-opacity duration-150 text-sm">Save summary as Image</button>
-        <div dir="rtl" class="bg-[#ecf0f1] p-5 rounded-lg mt-4 border summary-card max-w-lg" ref="summaryResult">
+        <div  class="bg-[#ecf0f1] p-5 rounded-lg mt-4 border summary-card max-w-lg" ref="summaryResult">
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <div class="markdown-body bg-white prose max-w-full prose-slate px-7 py-4 w-full" v-html="mdit.render(markdown)"></div>
           </div>
@@ -30,7 +29,6 @@
 <script>
 import {ref} from 'vue'
 import dropzone from '~/components/dropzone.vue'
-import Processing from '~/components/Processing.vue'
 import html2canvas from 'html2canvas'
 export default {
   setup() {
@@ -47,27 +45,26 @@ export default {
     let file = ref(null)
     let markdown = ref(``)
     let summaryResult = ref(null)
-    let processing = ref(false)
     $listen('imageReady', (files) => {
       //console.log(files)
       file.value = files[0]
     })
     const submit = async () => {
       const data = new FormData()
-      data.append('uri', file.value)
-      processing.value = true
-      const res = await $fetch(`${runtimeConfig.public.backend}/tools/summarize`, {
+      data.append('file', file.value)
+      $event('loader:show')
+      const res = await $fetch(`${runtimeConfig.public.backend}/api/sum`, {
         method: 'POST',
         body: data
       }).catch((err) => {
         toast.show({type: 'error', time: 2, title: 'Error', message: 'An error occurred, please try again'})
       })
       if (res) {
-        markdown.value = `${res.markdown}`
+        markdown.value = `${res.result}`
         file.value = null
         $event('dropzone:flush')
       }
-      processing.value = false
+      $event('loader:hide')
     }
     const saveSummaryAsImage = async () => {
       const printCanvas = await html2canvas(summaryResult._value, {
@@ -83,20 +80,18 @@ export default {
       markdown,
       mdit,
       summaryResult,
-      processing,
       saveSummaryAsImage,
       layoutConfig,
       submit
     }
   },
   components: {
-    dropzone,
-    Processing
+    dropzone
   },
   created() {
-      const { header, footer } = this.layoutConfig;
-      this.$route.meta.header = header;
-      this.$route.meta.footer = footer;
+    const { header, footer } = this.layoutConfig;
+    this.$route.meta.header = header;
+    this.$route.meta.footer = footer;
   }
 }
 </script>

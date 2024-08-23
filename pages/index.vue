@@ -72,14 +72,14 @@ export default {
         description: "Generate questions from any text to test your understanding or to prepare for exams.",
         path: '/tools/questions-extractor'
       },
-      {
+/*       {
         name: 'Questions answerer',
         icon: `done-all`,
         color: '#b9314f',
         tint: '#f7e0e5',
         description: "Ask any question related to the text, and this tool will provide you with accurate answers.",
         path: '/tools/questions-answerer'
-      }
+      } */
     ])
     const testAnim = () => {
       //const logoT = new gsap.timeline()

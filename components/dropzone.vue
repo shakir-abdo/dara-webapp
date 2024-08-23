@@ -35,7 +35,7 @@ export default {
           const errorsAr = {
             'file-invalid-type': 'The file type is not supported',
             'file-too-large': 'Image size should not exceed 20MB',
-            'file-too-small': 'File size should not be less than 50Kb',
+            'file-too-small': 'File size should not be less than 10Kb',
             'too-many-files': 'Please choose only one file'
           }
           reasons.forEach(err => {
@@ -50,7 +50,7 @@ export default {
     const convertImage = (img) => URL.createObjectURL(img)
     let dropzoneOptions = {
         maxSize: 20 * 1024 * 1024,
-        minSize: 50 * 1024,
+        minSize: 10 * 1024,
         accept:'application/pdf',
         maxFiles: 1,
         noClick: true,
