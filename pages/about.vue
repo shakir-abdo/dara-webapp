@@ -142,23 +142,5 @@ export default {
   opacity: 0.9;
 }
 
-.pattern {
-  background-color: #ffffff;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.pattern::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png);
-  opacity: 0.2;
-  z-index: -1;
-}
 </style>
 

@@ -1,5 +1,5 @@
 <template>
-    <div dir="rtl" v-if="showToast" class="fixed z-100 toast bg-white w-full shadow md:max-w-sm m-1 border p-2 rounded-lg" :class="`${type} ${positon}`">
+    <div  v-if="showToast" class="fixed z-100 toast bg-white w-full shadow md:max-w-sm m-1 border p-2 rounded-lg" :class="`${type} ${positon}`">
         <h1 class="font-bold toast-title">{{ toastTitle }}</h1>
         <p class="toast-body">{{ toastBody }}</p>
     </div>

@@ -11,6 +11,7 @@
           <ul class="font-medium bg-white absolute px-2 py-3 rounded shadow right-0  z-50 text-gray-600 w-40 text-sm">
             <nuxt-link to="/tools/summarize" class="block py-1 hover:bg-gray-200 px-2 transition-colors duration-200 rounded">Summarize</nuxt-link>
             <nuxt-link to="/tools/questions-extractor" class="block py-1 hover:bg-gray-200 px-2 transition-colors duration-200 rounded">Questions extractor</nuxt-link>
+            <nuxt-link to="/tools/chat" class="block py-1 hover:bg-gray-200 px-2 transition-colors duration-200 rounded">Chat with Dara</nuxt-link>
           </ul>
         </div>
       </div>
