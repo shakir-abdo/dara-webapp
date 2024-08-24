@@ -2,7 +2,7 @@
   <div>
     <div v-bind="getRootProps()" class="text-center p-4 rounded-lg mt-4 border" :class="[isDragActive ? 'bg-green-100 border-2 border-green-400' : 'bg-gray-100']">
       <input v-bind="getInputProps()" />
-      <img v-for="(file, idx) in acceptedFiles" :key="idx" :src="convertImage(file)" class="w-auto h-80 mx-auto shadow-lg rounded-lg">
+      <img v-for="(file, idx) in acceptedFiles" :key="idx" src="/file-icon.png" class="w-auto h-64 mx-auto shadow-lg rounded-lg">
       <div v-if="acceptedFiles.length < 1">
           <p v-if="isDragActive" class="text-gray-600">Drop file here ...</p>
           <p v-else class="text-gray-600">Choose or drop file here ..</p>
