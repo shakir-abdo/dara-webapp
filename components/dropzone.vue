@@ -24,7 +24,7 @@ import { useDropzone } from "vue3-dropzone";
 import { reactive } from 'vue'
 
 export default {
-  name: "UseDropzoneDemo",
+  name: "Dropzone",
   setup() {
         const { $event, $listen } = useNuxtApp()
         const errMsgs = reactive([])
@@ -51,7 +51,7 @@ export default {
     let dropzoneOptions = {
         maxSize: 20 * 1024 * 1024,
         minSize: 10 * 1024,
-        accept:'application/pdf',
+        accept:'application/pdf,application/msword,application/docx',
         maxFiles: 1,
         noClick: true,
         onDrop

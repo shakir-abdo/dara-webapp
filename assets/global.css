@@ -6,8 +6,20 @@
 [v-cloak] {
       display: none;
     }
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf');
+  font-weight:normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Bold.ttf');
+  font-weight:bold;
+  font-style: normal;
+}
 .main {
-  font-family: "DiodrumArabic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 [v-cloak] {
     display: none;
@@ -26,18 +38,6 @@
     background-color: var(--secondary);
 }
 
-/* .chat-enter-active,
-.chat-leave-active {
-    transition-property: opacity;
-    transition-timing-function: ease-in-out;
-    transition-duration: 500ms;
-}
-
-.chat-enter,
-.chat-leave-to {
-    opacity: 0;
-}
- */
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s ease-in-out;
