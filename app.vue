@@ -33,15 +33,15 @@
           <div class="w-full md:w-1/3 py-4">
             <h1 class="font-bold">Our tools</h1>
             <ul class="text-sm pt-2">
-              <nuxt-link to="/tools/summarize" class="block hover:text-gray-200 transition-colors duration-200 rounded">Summarizer</nuxt-link>
-              <nuxt-link to="/tools/questions-extractor" class="block hover:text-gray-200 transition-colors duration-200 rounded">Questions extractor</nuxt-link>
+              <nuxt-link to="/tools/summarize" class="block hover:text-gray-200 transition-colors duration-200 hover:underline">Summarizer</nuxt-link>
+              <nuxt-link to="/tools/questions-extractor" class="block hover:text-gray-200 transition-colors duration-200 hover:underline mt-1">Questions extractor</nuxt-link>
             </ul>
           </div>
           <div class="w-full md:w-1/3 py-4">
             <h1 class="font-bold">About</h1>
             <ul class="text-sm pt-2">
-              <nuxt-link to="/about" class="block hover:text-gray-200 transition-colors duration-200 rounded">Know more about Dara</nuxt-link>
-              <nuxt-link to="/about#members" class="block hover:text-gray-200 transition-colors duration-200 rounded">Team members</nuxt-link>
+              <nuxt-link to="/about" class="block hover:text-gray-200 transition-colors duration-200 hover:underline">Know more about Dara</nuxt-link>
+              <nuxt-link to="/about#members" class="block hover:text-gray-200 transition-colors duration-200 hover:underline mt-1">Team members</nuxt-link>
             </ul>
           </div>
         </div>

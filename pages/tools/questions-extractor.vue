@@ -1,5 +1,9 @@
 <template>
   <div class="container mx-auto px-2">
+      <div class="bg-gray-100 p-4 rounded-lg mt-8 border">
+        <h1 class="font-bold text-2xl">Questions extractor</h1>
+        <p class="text-gray-700 mt-2">This tool Generate questions from any text to test your understanding or to prepare for exams.</p>
+      </div>
     <h1 class="font-bold text-xl mt-8 text-gray-700">First, upload the file</h1>
     <dropzone />
     <div class="py-5" v-if="file">
