@@ -38,7 +38,7 @@
         <form @submit.prevent="sendMessage" class="container">
           <div class="container p-4">
             <div class="flex bg-white">
-              <textarea v-model="message" @keydown="handleKeydown" class="flex-1 p-0 border rounded-xl text-black" rows="2" placeholder="your message"></textarea>
+              <textarea v-model="message" @keydown="handleKeydown" class="flex-1 p-3 border rounded-xl text-black" rows="2" placeholder="your message"></textarea>
               <button :disabled="typing || !message" :class="[typing ? 'cursor-not-allowed opacity-40' : '']" type="submit" title="send" class="flex justify-center items-center bg-[#af3d50] hover:opacity-75 transition-opacity text-white px-3 rounded-xl ml-2 cursor-pointer"><i class="icon icon-lg rotate-45 icon-paper-plane"></i></button>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default {
       {
         id: nanoid(8),
         role: 'ai',
-        text: 'Hi Im Dara, How i can help you today ?'
+        text: 'Hi I\'m Dara, How can I help you today ?'
       }
     ])
     let message = ref('')
