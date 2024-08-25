@@ -104,7 +104,7 @@ export default {
       {
         name: 'Esraa .H',
         image: 'sroo.jpeg',
-        description: "Your upcoming Front-End developer, designer and software engineer. Don't miss out !!",
+        description: "Your upcoming Front-End developer, designer and software engineer. Stay tuned for more !!",
         links: [
           { url: 'https://github.com/EsraaGD', icon: 'github.svg' },
           { url: 'https://x.com/Sroo22o', icon: 'x.svg' }
