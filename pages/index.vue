@@ -2,7 +2,7 @@
   <div  :key="$route.path" class="hero">
     <div class="flex justify-between flex-wrap container mx-auto px-8 flex-col-reverse md:flex-row mb-48">
       <div class="w-full md:w-1/2 px-3">
-        <div class="pt-12 md:pt-32">
+        <div class="pt-12 md:pt-32" ref="heroInfo">
           <h1 class="text-3xl md:text-5xl font-bold pb-7">Dara, Elevate Your Learning ! </h1>
           <p>Dara is an innovative educational platform designed to enhance student learning through the power of AI. Featuring two core tools—Summarizer and Question Maker. Dara simplifies and accelerates the study process while providing a seamless, intuitive, and efficient learning experience.</p>
           <nuxt-link to="/#tools" class="bg-[#b9314f] text-white px-3 py-2 inline-block mt-5 rounded-xl"> Try now!</nuxt-link>
@@ -47,7 +47,7 @@
   </div>
 </template>
 <script>
-//import gsap from 'gsap'
+import gsap from 'gsap'
 export default {
   setup() {
     const layoutConfig = {
@@ -55,6 +55,7 @@ export default {
       footer: 1
     }
     const container = ref(null)
+    const heroInfo = ref(null)
     const tools = ref([
       {
         name: 'Summarizer',
@@ -82,9 +83,10 @@ export default {
       }
     ])
     const testAnim = () => {
-      //const logoT = new gsap.timeline()
+      const tl = new gsap.timeline()
+      tl.from(heroInfo.value, { opacity: 0, transformOrigin: 'center', y: 100, duration: 1.7, })
     }
-    return {layoutConfig, container, testAnim, tools}
+    return {layoutConfig, container, testAnim, tools, heroInfo}
   },
     created() {
       const { header, footer } = this.layoutConfig;
