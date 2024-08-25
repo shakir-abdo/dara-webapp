@@ -42,7 +42,7 @@
 
 <!-- Team Section -->
 <div id="members" class="py-20 text-center">
-  <h2 class="text-3xl font-bold">The Team</h2>
+  <h2 class="text-3xl font-bold">Who are we</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
     <div class="bg-white p-8 shadow-lg card-gradient relative flex flex-col justify-between rounded-lg" v-for="(member, index) in members" :key="index">
       <div>
@@ -95,7 +95,7 @@ export default {
       {
         name: 'Shakir. A',
         image: 'me.jpg',
-        description: `a driven, highly motivated, full-stack web developer. in love with Anything JS ♥️.`,
+        description: `A driven, highly motivated, full-stack web developer. in love with Anything JS ♥️.`,
         links: [
           { url: 'https://github.com/shakir-abdo', icon: 'github.svg' },
           { url: 'https://x.com/shakir_abdoo', icon: 'x.svg' }
@@ -104,7 +104,7 @@ export default {
       {
         name: 'Esraa .H',
         image: 'sroo.jpeg',
-        description: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam nisi nam!.",
+        description: "Your upcoming Front-End developer, designer and software engineer. Don't miss out !!",
         links: [
           { url: 'https://github.com/EsraaGD', icon: 'github.svg' },
           { url: 'https://x.com/Sroo22o', icon: 'x.svg' }
