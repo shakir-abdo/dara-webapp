@@ -52,8 +52,9 @@ export default {
     const submit = async () => {
       const data = new FormData()
       data.append('file', file.value)
-      $event('loader:show')
-      const res = await $fetch(`${runtimeConfig.public.backend}/api/sum`, {
+      
+      const api = useApi()
+      const res = await api.fetch(`${runtimeConfig.public.backend}/api/sum`, {
         method: 'POST',
         body: data
       }).catch((err) => {
@@ -64,7 +65,6 @@ export default {
         file.value = null
         $event('dropzone:flush')
       }
-      $event('loader:hide')
     }
     const saveSummaryAsImage = async () => {
       const printCanvas = await html2canvas(summaryResult._value, {

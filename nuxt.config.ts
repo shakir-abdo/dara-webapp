@@ -5,62 +5,70 @@ export default defineNuxtConfig({
     apiSecret: '123',
     // Keys within public are also exposed client-side
     public: {
-      apiBase: '/api',
+      // apiBase: '/',
       backend: process.env.BACKEND,
-      domain: process.env.DOMAIN
-    }
+      domain: process.env.DOMAIN,
+    },
   },
+
   nitro: {
-    compressPublicAssets: true
+    compressPublicAssets: true,
   },
+
   devtools: {
-    enabled: true
+    enabled: true,
   },
+
   vite: {
     resolve: {
       alias: {
         // vue: path.resolve(`./node_modules/vue`)
-      }
+      },
     },
     css: {
       preprocessorOptions: {
         scss: {
           //additionalData: '@use "@/assets/_colors.scss" as *;'
-        }
-      }
-    }
+        },
+      },
+    },
   },
+
   css: ['@/assets/global.css', '@/assets/icons.css'],
   plugins: ['@/plugins/event-bus.js', '@/plugins/markdownit.js'],
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@vite-pwa/nuxt'],
+
   pwa: {
     registerType: 'autoUpdate',
     strategies: 'generateSW',
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-      navigateFallback: null
+      navigateFallback: null,
     },
     manifest: {
       lang: 'ar',
       theme_color: '#edf2f7',
       name: '',
-      description: ''
-    }
+      description: '',
+    },
   },
+
   app: {
-    pageTransition: {name: 'page', mode: 'out-in'},
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       meta: [
         {
           name: 'viewport',
-          content: 'width=device-width, initial-scale=1'
+          content: 'width=device-width, initial-scale=1',
         },
         {
           name: 'charset',
-          content: 'utf-8'
+          content: 'utf-8',
         },
-        {name: 'description', content: ''}
-      ]
-    }
-  }
+        { name: 'description', content: '' },
+      ],
+    },
+  },
+
+  compatibilityDate: '2025-08-09',
 })

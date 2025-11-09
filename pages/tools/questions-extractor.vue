@@ -44,8 +44,9 @@ export default {
     const submit = async () => {
       const data = new FormData()
       data.append('file', file.value)
-      $event('loader:show')
-      const res = await $fetch(`${runtimeConfig.public.backend}/api/qs`, {
+      
+      const api = useApi()
+      const res = await api.fetch(`${runtimeConfig.public.backend}/api/qs`, {
         method: 'POST',
         body: data
       }).catch((err) => {
@@ -56,7 +57,6 @@ export default {
         file.value = null
         $event('dropzone:flush')
       }
-      $event('loader:hide')
     }
     return {
       file,

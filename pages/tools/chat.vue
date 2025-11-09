@@ -92,7 +92,9 @@ export default {
       })
       typing.value = true
       scrollToEndOfChat();
-      const res = await $fetch(`${runtimeConfig.public.backend}/api/chat`, {
+      
+      const api = useApi()
+      const res = await api.fetch(`${runtimeConfig.public.backend}/api/chat`, {
         method: 'POST',
         body: {
           question: message._value,

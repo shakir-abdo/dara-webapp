@@ -17,6 +17,7 @@
       </div>
     </nav>
     <div class="relative flex-1 flex flex-col items-stretch">
+      <Analytics />
       <NuxtPage  class="flex-1"/>
     </div>
     <pre-loader  :showLoading="loading"/>
@@ -51,58 +52,48 @@
 
   </NuxtLayout>
 </template>
-<script>
+
+<script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt';
 import Loader from "@/components/Loader"
 import PreLoader from "@/components/PreLoader"
 import Toast from "@/components/Toast"
 
-export default {
-  async setup() {
-    const runtimeConfig = useRuntimeConfig()
-    useSeoMeta({
-      title: 'Dara ai',
-      description: 'Dara is an innovative educational platform designed to enhance student learning',
-      ogTitle: 'Dara ai',
-      ogDescription: 'Dara is an innovative educational platform designed to enhance student learning',
-      ogImage: '/logo.png',
-      ogUrl: `${runtimeConfig.public.DOMAIN}`,
-      twitterTitle: 'Dara ai',
-      twitterDescription: '',
-      twitterImage: '/logo.png',
-      twitterCard: 'summary'
-    })
+const runtimeConfig = useRuntimeConfig()
+useSeoMeta({
+  title: 'Dara ai',
+  description: 'Dara is an innovative educational platform designed to enhance student learning',
+  ogTitle: 'Dara ai',
+  ogDescription: 'Dara is an innovative educational platform designed to enhance student learning',
+  ogImage: '/logo.png',
+  ogUrl: `${runtimeConfig.public.DOMAIN}`,
+  twitterTitle: 'Dara ai',
+  twitterDescription: '',
+  twitterImage: '/logo.png',
+  twitterCard: 'summary'
+})
 
-    useHead({
-      htmlAttrs: {
-        lang: 'ar'
-      },
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/favicon.ico'
-      }
-    ]
-  })
-  const nuxtApp = useNuxtApp();
-  const loading = ref(true);
-  nuxtApp.hook("page:start", () => {
-    loading.value = true;
-  });
-  nuxtApp.hook("page:finish", () => {
-    loading.value = false;
-  });
-
-    return {
-      loading
-    }
+useHead({
+  htmlAttrs: {
+    lang: 'ar'
   },
-  components: {
-    Loader,
-    PreLoader,
-    Toast
-  }
-}
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.ico'
+    }
+  ]
+})
+const nuxtApp = useNuxtApp();
+const loading = ref(true);
+nuxtApp.hook("page:start", () => {
+  loading.value = true;
+});
+nuxtApp.hook("page:finish", () => {
+  loading.value = false;
+});
+
 </script>
 <style>
 .tools-menu-cont ul {
